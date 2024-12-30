@@ -1,0 +1,4 @@
+
+select person_name from (Select *, sum(weight) over (order by turn) as tweight from Queue order by turn) b
+where tweight <=1000 
+order by tweight desc limit 1
