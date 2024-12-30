@@ -1,0 +1,4 @@
+Select a.name from Employee a, Employee b
+where a.id = b.managerId 
+GROUP BY b.managerId 
+having count(b.managerId )>=5
