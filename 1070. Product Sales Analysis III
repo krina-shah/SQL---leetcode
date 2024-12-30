@@ -1,0 +1,5 @@
+
+
+Select Sales.product_id, Sales.year as first_year , Sales.quantity,  Sales.price
+From Sales
+where (product_id, year) in (select product_id, min(year) from Sales group by product_id)
